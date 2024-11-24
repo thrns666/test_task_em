@@ -9,7 +9,7 @@ Console app for manage book libriary
 - delete books --> delete_book -> 0 (id) -> return dict with deleted book
 
 Data stored in JSON file, file create automatically, when you run main.py for first time.
-For unittests tests, the JSON file is automatically created and deleted.
+For unittest tests, the JSON file is automatically created and deleted.
 
 Execute:
 run main.py
