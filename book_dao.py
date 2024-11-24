@@ -1,12 +1,16 @@
 import json
-from typing import Annotated, Any, Dict, AnyStr, List, NoReturn, Union
+import os
+from typing import Dict, List, NoReturn
 
 from model import Book
 
 
 class BookDAO:
+    _base_dir = os.path.dirname(os.path.abspath(__file__))
+    _file_path = os.path.join(_base_dir, 'repo.json')
+
     __model = Book
-    js_file = 'repo.json'
+    js_file = _file_path
 
     @classmethod
     def create_repo(cls) -> NoReturn | Exception:
