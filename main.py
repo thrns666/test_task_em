@@ -37,8 +37,11 @@ def main_script() -> NoReturn:
                 res = BookDAO.get_all()
                 if res:
                     books = res.get('books')
+                    if not books:
+                        print('Empty list, add one')
                     for book in books:
                         print(book)
+
             except Exception as e:
                 print(e)
 
